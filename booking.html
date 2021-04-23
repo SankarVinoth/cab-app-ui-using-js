@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>CabOptions</title>
+</head>
+<script src="booking.js"></script>
+<body>
+    <center>
+<h1>Cab Options</h1>
+<form onsubmit="booking()"   action="thankyou.html" >
+<label>Select Cab Types:</label> <br/>
+<select name="CabType"  id="cabtype" required>
+<option disabled>-----> Select cab Types</option>
+<option value="Micro">Micro</option>
+<option value="Mini">Mini</option>
+<option value="Prime">Prime</option>
+</select>
+<br/>
+<label>Enter Kms:</label> <br/>
+<input type="number" id="kilometers" placeholder="Enter km"  min="0" max="100" required>
+<br/>
+<label>Journey Date</label>
+<input type="date" name=" JourneyDate"  id="JourneyDate" placeholder="Enter date" min="2021-04-22" max="2021-05-01"  required ><br/>
+<label>Timing</label>
+<input type="time" name=" JourneyTime"  id="JourneyTime" placeholder="Enter time" required><br/>
+gst:<input type="number" name="gst" value="10" id="gst" readonly><br/>
+<input type="checkbox" name="Seniorcitizen" value="Y" id="Seniorcitizen"  > Seniorcitizen <br/>
+<label>gender</label>
+<input type="radio" name="gender" value="M"  > Male <br/>
+<input type="radio" name="gender" value="F"  > Female <br/>
+<h4>Instructions</h4>
+<ul>
+     <li> Must Wear masks</li>
+     <li> Should not eat in the cab</li>
+</ul>
+<br/>
+<button>Submit</button>
+<br>
+</center>
+</form>
+</body>
+</html>

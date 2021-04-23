@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to cabs </title>
+
+</head>
+<body>
+<center>
+<h1>Login page</h1>
+<br/>
+<form onsubmit="login()" action="thankyou.html" >
+    
+<label for ="name">Enter Your number</label>
+<input type="number" name="number"  id="Number"  placeholder="Enter mobile no" required autofocus> <br/>
+<label for="Password">Enter Your Password</label>
+<input type="password" name=" password"  id="password"  placeholder="Enter password" required><br/>
+<button>Submit</button>
+</center>
+</form>
+<script>
+  function login() {
+	  event.preventDefault();
+	  
+	  let username = document.querySelector("#Number").value;
+	  let password = document.querySelector("#password").value;
+	  
+	 let valid =true;
+	 if(username.length==10 && password.length==8) {
+		 
+         valid=true;
+		 
+		
+		 }
+	 else {
+		 
+		 valid =false;
+     }
+	 if(valid==true) {
+		window.location.href="options.html";
+	 }
+     else {
+		 alert("Invalid credentials please try Once");
+	 }
+  }
+
+</script>
+
+</body>
+</html>
